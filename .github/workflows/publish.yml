@@ -16,7 +16,6 @@ jobs:
       run: |
         export PATH="$HOME/.local/bin:$PATH"
         sudo apt-get install -y python3-setuptools
-        pip3 install --user -r sphinx-requirements.txt
     - name: Build the docs
       run: |
         export PATH="$HOME/.local/bin:$PATH"
@@ -25,5 +24,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: _build/html
+        publish_dir: build/html
         publish_branch: latestHTML
